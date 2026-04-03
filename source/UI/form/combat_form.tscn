@@ -1,10 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://d08olufvkbwcn"]
+[gd_scene format=3 uid="uid://d08olufvkbwcn"]
 
 [ext_resource type="PackedScene" uid="uid://72uhpsyxdbi7" path="res://source/UI/widgets/card/w_card_manager.tscn" id="1_i77bo"]
-[ext_resource type="Script" path="res://source/UI/form/combat_form.gd" id="1_kt0dy"]
+[ext_resource type="Script" uid="uid://dtj3wpxn7f8ml" path="res://source/UI/form/combat_form.gd" id="1_kt0dy"]
 [ext_resource type="PackedScene" uid="uid://bvbsh6gt6f3w2" path="res://source/UI/widgets/w_status_bar.tscn" id="2_8h2ee"]
 [ext_resource type="Texture2D" uid="uid://4pjk2fsbfugu" path="res://assets/textures/widgets/icons/icon_energy.tres" id="3_epp6o"]
-[ext_resource type="Script" path="res://source/UI/widgets/w_turn.gd" id="3_f1pr6"]
+[ext_resource type="Script" uid="uid://cnooesmwkmdp7" path="res://source/UI/widgets/w_turn.gd" id="3_f1pr6"]
 [ext_resource type="FontFile" uid="uid://bp53tlinpuypa" path="res://assets/fonts/SourceHanSansCN-Normal.otf" id="4_rpfgr"]
 [ext_resource type="Texture2D" uid="uid://dwtuh8qseqye5" path="res://assets/textures/widgets/icons/icon_turn.tres" id="6_y5c6i"]
 
@@ -13,7 +13,7 @@ font_size = 22
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
-[node name="combat_form" type="Control"]
+[node name="combat_form" type="Control" unique_id=673728925]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,31 +23,31 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_kt0dy")
 
-[node name="w_status_bar" parent="." instance=ExtResource("2_8h2ee")]
+[node name="w_status_bar" parent="." unique_id=953977196 instance=ExtResource("2_8h2ee")]
 layout_mode = 1
 anchors_preset = 10
 anchor_bottom = 0.0
 offset_bottom = 75.0
 grow_vertical = 1
 
-[node name="w_energy" type="MarginContainer" parent="."]
+[node name="w_energy" type="MarginContainer" parent="." unique_id=307577469]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 88.0
-offset_top = -106.0
-offset_right = 152.0
-offset_bottom = -42.0
+offset_left = 120.525
+offset_top = -94.96997
+offset_right = 184.52501
+offset_bottom = -30.96997
 grow_vertical = 0
 metadata/_edit_group_ = true
 
-[node name="ColorRect" type="TextureRect" parent="w_energy"]
+[node name="ColorRect" type="TextureRect" parent="w_energy" unique_id=864510937]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 texture = ExtResource("3_epp6o")
 
-[node name="lab_power" type="Label" parent="w_energy"]
+[node name="lab_power" type="Label" parent="w_energy" unique_id=1057770903]
 unique_name_in_owner = true
 layout_mode = 2
 text = "4/4"
@@ -55,7 +55,7 @@ label_settings = SubResource("LabelSettings_gsyk6")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="w_turn" type="MarginContainer" parent="."]
+[node name="w_turn" type="MarginContainer" parent="." unique_id=304330803]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -74,13 +74,13 @@ tooltip_text = "按下这个按钮将会结束你的回合。
 script = ExtResource("3_f1pr6")
 metadata/_edit_group_ = true
 
-[node name="ColorRect" type="ColorRect" parent="w_turn"]
+[node name="ColorRect" type="ColorRect" parent="w_turn" unique_id=2032477114]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 mouse_filter = 1
 color = Color(0.054902, 0.447059, 1, 1)
 
-[node name="btn_end_turn" type="Button" parent="w_turn"]
+[node name="btn_end_turn" type="Button" parent="w_turn" unique_id=1921269866]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 1
@@ -90,7 +90,7 @@ theme_override_fonts/font = ExtResource("4_rpfgr")
 text = "结束回合"
 icon = ExtResource("6_y5c6i")
 
-[node name="turn_begin" type="MarginContainer" parent="."]
+[node name="turn_begin" type="MarginContainer" parent="." unique_id=1143588249]
 unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(0, 100)
@@ -102,11 +102,11 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="turn_begin"]
+[node name="ColorRect" type="ColorRect" parent="turn_begin" unique_id=1454679440]
 layout_mode = 2
 color = Color(0, 0, 0, 0.337255)
 
-[node name="lab_turn_begin" type="Label" parent="turn_begin"]
+[node name="lab_turn_begin" type="Label" parent="turn_begin" unique_id=1883806367]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -116,6 +116,6 @@ text = "玩家回合"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CardContainer" parent="." instance=ExtResource("1_i77bo")]
+[node name="CardContainer" parent="." unique_id=1503557944 instance=ExtResource("1_i77bo")]
 unique_name_in_owner = true
 layout_mode = 1

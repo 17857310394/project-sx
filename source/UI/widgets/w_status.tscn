@@ -1,22 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://mve4xgcaye53"]
+[gd_scene format=3 uid="uid://mve4xgcaye53"]
 
-[ext_resource type="Script" path="res://source/UI/widgets/w_status.gd" id="1_k8k6n"]
+[ext_resource type="Script" uid="uid://dxfae860cr45a" path="res://source/UI/widgets/w_status.gd" id="1_k8k6n"]
 [ext_resource type="Texture2D" uid="uid://de8p1ywikmdex" path="res://assets/textures/widgets/icons/icon_health.tres" id="1_m7auv"]
 
-[node name="w_status" type="MarginContainer"]
+[node name="w_status" type="MarginContainer" unique_id=1009651409]
 script = ExtResource("1_k8k6n")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1782746053]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=455327511]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(22, 22)
+custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 texture = ExtResource("1_m7auv")
 expand_mode = 1
 
-[node name="label" type="Label" parent="HBoxContainer"]
+[node name="label" type="Label" parent="HBoxContainer" unique_id=444634965]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
