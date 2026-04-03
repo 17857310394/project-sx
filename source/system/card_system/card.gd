@@ -63,9 +63,9 @@ func release(caster: Character, selected_cha: Character) -> void:
 	assert(selected_cha != null, "卡牌目标不能为空！")
 	if not needs_target():
 		selected_cha = caster
-	for effect_id: StringName in _model.effects:
+	for effect_param in _model.effects:
 		#TODO 需要根据条件获取目标
-		Effect.try_execute(effect_id, caster, [selected_cha])
+		Effect.try_execute(effect_param.effectID, caster, [selected_cha], effect_param.value)
 	# 消耗能量
 	caster.use_energy(_model.cost)
 	await caster.play_animation_with_reset(_model.play_animation)
