@@ -1,10 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bvbsh6gt6f3w2"]
+[gd_scene format=3 uid="uid://bvbsh6gt6f3w2"]
 
-[ext_resource type="Script" path="res://source/UI/widgets/w_status_bar.gd" id="1_uo83n"]
+[ext_resource type="Script" uid="uid://dd5a57w3iakla" path="res://source/UI/widgets/w_status_bar.gd" id="1_uo83n"]
 [ext_resource type="PackedScene" uid="uid://mve4xgcaye53" path="res://source/UI/widgets/w_status.tscn" id="2_uj4b2"]
 [ext_resource type="Texture2D" uid="uid://c655ojsa81no8" path="res://assets/textures/widgets/icons/icon_coin.tres" id="3_g3wbk"]
 [ext_resource type="Texture2D" uid="uid://benmyy0cyqqf1" path="res://assets/textures/widgets/icons/icon_map.tres" id="4_o5chf"]
-[ext_resource type="Script" path="res://source/UI/widgets/status_button.gd" id="5_2l7we"]
+[ext_resource type="Script" uid="uid://bx18vxm1qn7b4" path="res://source/UI/widgets/status_button.gd" id="5_2l7we"]
 [ext_resource type="Texture2D" uid="uid://diryem3klgdu6" path="res://assets/textures/widgets/icons/icon_draw_deck.tres" id="5_purme"]
 [ext_resource type="Texture2D" uid="uid://cko57iolst8sg" path="res://assets/textures/widgets/icons/icon_settings.tres" id="6_eucxe"]
 
@@ -20,7 +20,7 @@ outline_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_tk3ut"]
 font_color = Color(0.00784314, 1, 1, 1)
 
-[node name="w_status_bar" type="MarginContainer"]
+[node name="w_status_bar" type="MarginContainer" unique_id=1886936934]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -28,32 +28,32 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uo83n")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1233219647]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=311463747]
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer"]
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer" unique_id=1808761034]
 layout_mode = 2
 color = Color(0.0862745, 0.0862745, 0.0862745, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer" unique_id=160126006]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/MarginContainer" unique_id=734337469]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer" unique_id=1060178167]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer" unique_id=1748950949]
 layout_mode = 2
 size_flags_horizontal = 2
 
-[node name="lab_name" type="Label" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+[node name="lab_name" type="Label" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer" unique_id=21180492]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
@@ -61,10 +61,10 @@ text = "玩家名"
 label_settings = SubResource("LabelSettings_7vb4m")
 vertical_alignment = 1
 
-[node name="VSeparator3" type="VSeparator" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+[node name="VSeparator3" type="VSeparator" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer" unique_id=68592147]
 layout_mode = 2
 
-[node name="lab_hero" type="Label" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+[node name="lab_hero" type="Label" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer" unique_id=1946910016]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
@@ -72,56 +72,55 @@ text = "英雄名称"
 label_settings = SubResource("LabelSettings_v0kub")
 vertical_alignment = 1
 
-[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer" unique_id=1837920817]
 layout_mode = 2
 
-[node name="w_status_health" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer" instance=ExtResource("2_uj4b2")]
+[node name="w_status_health" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer" unique_id=335828494 instance=ExtResource("2_uj4b2")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="VSeparator" type="VSeparator" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer" unique_id=85908127]
 layout_mode = 2
 
-[node name="w_status_coin" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer" instance=ExtResource("2_uj4b2")]
+[node name="w_status_coin" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer" unique_id=204778824 instance=ExtResource("2_uj4b2")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="TextureRect" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/w_status_coin/HBoxContainer" index="0"]
+[node name="TextureRect" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/w_status_coin/HBoxContainer" parent_id_path=PackedInt32Array(204778824, 1782746053) index="0" unique_id=455327511]
 texture = ExtResource("3_g3wbk")
 
-[node name="label" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/w_status_coin/HBoxContainer" index="1"]
+[node name="label" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/w_status_coin/HBoxContainer" parent_id_path=PackedInt32Array(204778824, 1782746053) index="1" unique_id=444634965]
 theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "100
-"
+text = "100"
 
-[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer" unique_id=1909455749]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "<战斗地点>"
 label_settings = SubResource("LabelSettings_tk3ut")
 
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer" unique_id=659621404]
 layout_mode = 2
 theme_override_constants/margin_right = 10
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer2"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer2" unique_id=1833004619]
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4
 
-[node name="btn_map" type="TextureButton" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer2"]
+[node name="btn_map" type="TextureButton" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer2" unique_id=1593523098]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("4_o5chf")
 script = ExtResource("5_2l7we")
 
-[node name="btn_card_deck" type="TextureButton" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer2"]
+[node name="btn_card_deck" type="TextureButton" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer2" unique_id=82453054]
 layout_mode = 2
 texture_normal = ExtResource("5_purme")
 script = ExtResource("5_2l7we")
 
-[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer2/btn_card_deck"]
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer2/btn_card_deck" unique_id=1804282615]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -134,20 +133,20 @@ text = "999"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="btn_settings" type="TextureButton" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer2"]
+[node name="btn_settings" type="TextureButton" parent="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer2/HBoxContainer2" unique_id=686295152]
 layout_mode = 2
 texture_normal = ExtResource("6_eucxe")
 script = ExtResource("5_2l7we")
 
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1378078342]
 custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer2"]
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer2" unique_id=429318294]
 layout_mode = 2
 color = Color(0.101961, 0.101961, 0.101961, 0.407843)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer2" unique_id=290422654]
 layout_mode = 2
 
 [editable path="VBoxContainer/MarginContainer/MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/w_status_coin"]

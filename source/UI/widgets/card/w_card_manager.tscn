@@ -1,13 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://72uhpsyxdbi7"]
+[gd_scene format=3 uid="uid://72uhpsyxdbi7"]
 
-[ext_resource type="Script" path="res://source/UI/widgets/card/w_card_manager.gd" id="1_u3n8i"]
-[ext_resource type="Script" path="res://source/UI/widgets/card/w_hand_card.gd" id="2_bfh1e"]
+[ext_resource type="Script" uid="uid://br4wc6pg6nhe3" path="res://source/UI/widgets/card/w_card_manager.gd" id="1_u3n8i"]
+[ext_resource type="Script" uid="uid://bfd5m5ndasisx" path="res://source/UI/widgets/card/w_hand_card.gd" id="2_bfh1e"]
 [ext_resource type="PackedScene" uid="uid://dikirj650nrtg" path="res://source/UI/widgets/card/w_card_deck.tscn" id="2_fw5vv"]
 [ext_resource type="Texture2D" uid="uid://6wh8c7mujene" path="res://assets/textures/widgets/icons/icon_discard_deck.tres" id="5_cd6nf"]
-[ext_resource type="Script" path="res://source/UI/widgets/card/bezier_arrow.gd" id="6_our5o"]
+[ext_resource type="Script" uid="uid://jhwb1ljbrvdf" path="res://source/UI/widgets/card/bezier_arrow.gd" id="6_our5o"]
 [ext_resource type="PackedScene" uid="uid://cixs5tbqar2uk" path="res://source/UI/widgets/card/w_deck_details.tscn" id="7_td0xq"]
 
-[node name="w_card_manager" type="Control"]
+[node name="w_card_manager" type="Control" unique_id=137981320]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,7 +17,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_u3n8i")
 
-[node name="W_HandCard" type="Container" parent="." node_paths=PackedStringArray("draw_deck", "discard_deck")]
+[node name="W_HandCard" type="Container" parent="." unique_id=423196965 node_paths=PackedStringArray("draw_deck", "discard_deck")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 7
@@ -31,7 +31,7 @@ script = ExtResource("2_bfh1e")
 draw_deck = NodePath("../draw_deck")
 discard_deck = NodePath("../discard_deck")
 
-[node name="draw_deck" parent="." instance=ExtResource("2_fw5vv")]
+[node name="draw_deck" parent="." unique_id=1758936046 instance=ExtResource("2_fw5vv")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 2
@@ -40,14 +40,14 @@ anchor_top = 1.0
 anchor_right = 0.0
 anchor_bottom = 1.0
 offset_left = 32.0
-offset_top = -72.0
-offset_right = 80.0
+offset_top = -99.0
+offset_right = 107.0
 offset_bottom = -24.0
 grow_horizontal = 1
 grow_vertical = 0
 metadata/_edit_group_ = true
 
-[node name="discard_deck" parent="." instance=ExtResource("2_fw5vv")]
+[node name="discard_deck" parent="." unique_id=1469503049 instance=ExtResource("2_fw5vv")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 3
@@ -56,8 +56,8 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -80.0
-offset_top = -72.0
-offset_right = -32.0
+offset_top = -99.0
+offset_right = -5.0
 offset_bottom = -24.0
 grow_horizontal = 0
 grow_vertical = 0
@@ -70,12 +70,12 @@ texture = ExtResource("5_cd6nf")
 [node name="lab_card_amount" parent="discard_deck" index="1"]
 size_flags_horizontal = 0
 
-[node name="w_deck_details" parent="." instance=ExtResource("7_td0xq")]
+[node name="w_deck_details" parent="." unique_id=2074306186 instance=ExtResource("7_td0xq")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
 
-[node name="bezier_arrow" type="Node2D" parent="."]
+[node name="bezier_arrow" type="Node2D" parent="." unique_id=408507448]
 unique_name_in_owner = true
 script = ExtResource("6_our5o")
 
