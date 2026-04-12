@@ -25,14 +25,11 @@ var effect_name := ""
 var effect_description := ""
 ## 目标类型
 var target_type := 0
-## 效果值
-var effect_value := 0
 
-func _init(data: Dictionary,value:int) -> void:
+func _init(data: Dictionary) -> void:
 	effect_name = data.effect_name
 	effect_description = data.description
 	target_type = data.target_type
-	effect_value = value
 
 ## 执行效果
 func execute() -> void:
@@ -49,18 +46,18 @@ func get_effect_targets(caster: Character, targets: Array[Character]) -> Array[C
 	return targets
 
 ## 创建效果
-static func create_effect(effectID: String, caster: Character, targets: Array[Character],value:int = 1) -> Effect:
+static func create_effect(effectID: String, caster: Character, targets: Array[Character]) -> Effect:
 	var data := DatatableManager.get_datatable_row("ability_effect", effectID)
 	var effect : Effect = null
 	match data.effect_type:
 		EFFECT_TYPE.DAMAGE:
-			effect = EffectDamage.new(data,value)
+			effect = EffectDamage.new(data)
 		EFFECT_TYPE.SHIELDED:
-			effect = EffectShielded.new(data,value)
+			effect = EffectShielded.new(data)
 		EFFECT_TYPE.ADD_BUFF:
-			effect = EffectApplyBuff.new(data,value)
+			effect = EffectApplyBuff.new(data)
 		EFFECT_TYPE.VULNERABLE:
-			effect = EffectVulnerable.new(data,value)
+			effect = EffectVulnerable.new(data)
 		_:
 			push_error("未知的effect类型， 无法创建效果", data.effect_type)
 			return null
@@ -69,8 +66,8 @@ static func create_effect(effectID: String, caster: Character, targets: Array[Ch
 	return effect
 
 ## 尝试创建并执行效果
-static func try_execute(effectID: String, caster: Character, targets: Array[Character],value:int = 1) -> void:
-	var effect = Effect.create_effect(effectID, caster, targets,value)
+static func try_execute(effectID: String, caster: Character, targets: Array[Character]) -> void:
+	var effect = Effect.create_effect(effectID, caster, targets)
 	if not effect:
 		push_error("创建技能效果失败！")
 	effect.execute()

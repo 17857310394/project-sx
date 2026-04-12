@@ -98,7 +98,7 @@ func damage(damage: Damage) -> void:
 		_model.current_health = 0
 		death()
 	else:
-		await play_animation_with_reset("hurt")
+		play_animation_with_reset("hurt")
 		# print("受到伤害：", damage)
 		play_animation_with_reset("idle")
 	damaged.emit()

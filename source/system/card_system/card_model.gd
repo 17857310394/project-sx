@@ -42,11 +42,6 @@ const CARD_TYPE_NAME: Array[String] = [
 ## 词条集(用来显示）
 @export var buff_des : PackedStringArray = []
 
-class CardEffectParam:
-	var effectID : String = ""
-	var value :int = 0
-
-
 func _init(card_id: String) -> void:
 	if card_id.is_empty(): return
 	var data = DatatableManager.get_datatable_row("card", card_id)
@@ -56,14 +51,7 @@ func _init(card_id: String) -> void:
 	cost = data.cost
 	icon = data.icon
 	target_type = data.target_type
-
-	var effect_params = data.effects.split("|")
-	for param in effect_params:
-		var card_effect_param = CardEffectParam.new()
-		card_effect_param.effectID = param.split("*")[0]
-		card_effect_param.value = int(param.split("*")[1])
-		effects.append(card_effect_param)
-
+	effects = data.effects
 	play_animation = data.play_animation
 	buff_des = data.buff_des
 
